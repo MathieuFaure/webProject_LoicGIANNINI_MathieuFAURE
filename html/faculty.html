@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty - Efrei</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="faculty-container">
+    <header class="header">
+        <img class="logo-efrei" src="../img/logoEfrei.png" alt="Efrei Logo" />
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="faculty.html" class="active">Faculty</a>
+            <a href="publications.html">Publications</a>
+            <a href="programs.html">Programs</a>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="page-title">
+            <h1>Meet the team</h1>
+            <p>The people behind the innovation</p>
+        </div>
+
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search by name (ex: Hans)...">
+                <button id="searchBtn">Research</button>
+            </div>
+
+            <div class="filter-box">
+                <select id="roleFilter">
+                    <option value="all">Filter by: All Roles</option>
+                    <option value="Researcher">Researcher</option>
+                    <option value="Professor">Professor</option>
+                    <option value="PhD Student">PhD Student</option>
+                    <option value="Department Head">Department Head</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <main class="faculty-grid" id="facultyGrid">
+        <div class="person-card" data-role="Department Head">
+            <div class="photo-area"></div>
+            <h2 class="name">Amara Traoré</h2>
+            <p class="role">Department Head</p>
+        </div>
+        <div class="person-card" data-role="Researcher">
+            <div class="photo-area"></div>
+            <h2 class="name">Li Wei</h2>
+            <p class="role">Researcher</p>
+        </div>
+        <div class="person-card" data-role="Professor">
+            <div class="photo-area"></div>
+            <h2 class="name">Hans Müller</h2>
+            <p class="role">Professor</p>
+        </div>
+        <div class="person-card" data-role="PhD Student">
+            <div class="photo-area"></div>
+            <h2 class="name">Sriya Iyer</h2>
+            <p class="role">PhD Student</p>
+        </div>
+        <div class="person-card" data-role="Professor">
+            <div class="photo-area"></div>
+            <h2 class="name">Elena Rodriguez</h2>
+            <p class="role">Professor</p>
+        </div>
+        <div class="person-card" data-role="Researcher">
+            <div class="photo-area"></div>
+            <h2 class="name">Jean-Baptiste Durand</h2>
+            <p class="role">Researcher</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-logo">
+                <img class="logo-efrei-footer" src="../img/logoEfrei.png" alt="Efrei Logo" />
+            </div>
+
+            <div class="footer-nav">
+                <h3>NAVIGATION</h3>
+                <a href="index.html">Home</a>
+                <a href="faculty.html">Faculty</a>
+                <a href="publications.html">Publications</a>
+                <a href="content.html">Content</a>
+            </div>
+
+            <div class="footer-contact">
+                <div class="contact-info">
+                    <h3>CONTACT</h3>
+                    <p>30-32 av. de la République</p>
+                    <p>94800 Villejuif, France</p>
+                    <p>cs.department@efrei.fr</p>
+                    <p>+33 1 01 02 03 04</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>©2026 Efrei | <a href="#">Personal Data</a> | <a href="https://efrei.fr">Efrei.fr</a> | <a href="#">About Us</a></p>
+        </div>
+    </footer>
+</div>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
