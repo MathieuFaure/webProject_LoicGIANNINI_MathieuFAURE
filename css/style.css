@@ -78,6 +78,7 @@ body {
     outline: none;
 }
 
+/* Effet sur le bouton Research */
 #searchBtn {
     padding: 15px 35px;
     background-color: #000;
@@ -86,6 +87,13 @@ body {
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
+    transition: all 0.3s ease; /* Transition fluide */
+}
+
+#searchBtn:hover {
+    background-color: #f1cf0a; /* Devient jaune Efrei */
+    color: #000;              /* Texte devient noir */
+    transform: translateY(-2px); /* Petit saut vers le haut */
 }
 
 /* --- GRILLE FACULTY (FOND NOIR / CARTES BLANCHES) --- */
@@ -99,13 +107,43 @@ body {
     margin: 0 auto;
 }
 
+/* --- EFFET AU SURVOL DES CARTES --- */
 .person-card {
     background-color: #ffffff;
     color: #000000;
     padding: 30px;
     border-radius: 15px;
     text-align: center;
-    min-height: 450px;
+    cursor: pointer;
+
+    /* Transition fluide pour tous les changements (0.3 secondes) */
+    transition: all 0.3s ease-in-out;
+
+    /* Ombre légère par défaut */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 0;
+}
+
+.person-card:hover {
+    /* Soulève légèrement la carte */
+    transform: translateY(-10px) scale(1.02);
+
+    /* Accentue l'ombre pour donner un effet de profondeur */
+    box-shadow: 0 15px 30px rgba(241, 207, 10, 0.2); /* Ombre teintée au jaune Efrei */
+
+    /* Optionnel : change très légèrement la couleur du nom au survol */
+}
+
+.person-card:hover .name {
+    color: #f1cf0a; /* Le nom passe au jaune Efrei au survol */
+    transition: color 0.3s ease;
+}
+
+/* Effet sur la photo au survol */
+.person-card:hover .photo-area {
+    background-color: #d0d0d0; /* La zone grise devient un peu plus foncée */
+    transition: background-color 0.3s ease;
 }
 
 .photo-area {
@@ -215,4 +253,249 @@ body {
     .footer-main { flex-direction: column; gap: 40px; }
     .footer-contact { align-items: center; }
     .logo-efrei-footer { width: 200px; }
+}
+
+
+/* --- MODALE --- */
+.modal {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fond sombre transparent */
+    backdrop-filter: blur(8px); /* L'EFFET DE FLOU DERRIÈRE */
+}
+
+.modal-content {
+    background-color: #fff;
+    color: #000;
+    margin: 5% auto;
+    padding: 40px;
+    border-radius: 20px;
+    width: 60%; /* Ne prend pas toute la page */
+    max-width: 800px;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-modal {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* --- STRUCTURE INTERNE MODALE --- */
+.modal-header {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.modal-photo {
+    width: 180px;
+    height: 180px;
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    flex-shrink: 0;
+}
+
+.modal-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.modal-info p {
+    font-size: 1.3rem;
+    color: #f1cf0a; /* Rappel couleur Efrei */
+    font-weight: bold;
+}
+
+.modal-body h3 {
+    margin: 20px 0 10px 0;
+    border-bottom: 2px solid #f1cf0a;
+    display: inline-block;
+}
+
+.modal-body p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+/* --- PUBLICATIONS SPECIFIC --- */
+.filter-sort-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.category-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.cat-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px; /* BIEN ARRONDI */
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.cat-btn.active, .cat-btn:hover {
+    background: #f1cf0a;
+    color: #000;
+}
+
+/* SORT BY ÉPURÉ (Écriture noire, pas de fond) */
+.sort-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+    font-weight: bold;
+}
+
+.sort-box select {
+    background: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px 15px;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* --- PUBLICATION CARDS (LIST) --- */
+.publications-list {
+    background: #000;
+    padding: 60px 10%;
+}
+
+.pub-card {
+    background: #fff;
+    color: #000;
+    display: flex;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 220px;
+}
+
+.pub-image {
+    width: 250px;
+    background: #e0e0e0;
+    flex-shrink: 0;
+}
+
+.pub-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.pub-meta { color: #666; font-size: 0.9rem; margin-bottom: 10px; }
+.pub-title { font-size: 1.5rem; margin-bottom: 15px; }
+.pub-desc { color: #444; line-height: 1.4; }
+
+.read-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    background: #000;
+    color: #fff;
+    padding: 8px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.read-btn:hover {
+    background: #f1cf0a;
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* --- PUB MODAL STYLES --- */
+.pub-modal-size {
+    width: 80%;
+    max-width: 900px;
+    padding: 50px;
+}
+
+/* Header divisé en deux */
+.pub-modal-header-split {
+    display: flex;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.modal-section-left, .modal-section-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le contenu horizontalement */
+    justify-content: center;
+}
+
+.modal-section-left {
+    border-right: 1px solid #eee; /* Séparation visuelle */
+}
+
+/* Images de même taille */
+.modal-image-placeholder, .author-photo-placeholder {
+    width: 200px;
+    height: 200px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.modal-meta-text, .modal-author-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.pub-modal-body h2 {
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+.modal-text-content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Petit divider jaune sous le titre dans la modale */
+.modal-divider {
+    border: 0;
+    height: 4px;
+    background: #f1cf0a;
+    width: 60px;
+    margin-bottom: 20px;
 }

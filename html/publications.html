@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Efrei CS Department</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="main-wrapper">
+    <header class="header">
+        <img class="logo-efrei" src="../img/logoEfrei.png" alt="Efrei Logo" />
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="faculty.html">Faculty</a>
+            <a href="publications.html" class="active">Publications</a>
+            <a href="programs.html">Programs</a>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="page-title">
+            <h1>Publications</h1>
+            <p>Articles, reports and working papers from our researchers</p>
+        </div>
+
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search by title...">
+                <button id="searchBtn">Research</button>
+            </div>
+
+            <div class="filter-sort-row">
+                <div class="category-buttons">
+                    <button class="cat-btn active" data-filter="all">All</button>
+                    <button class="cat-btn" data-filter="Article">Articles</button>
+                    <button class="cat-btn" data-filter="Report">Reports</button>
+                    <button class="cat-btn" data-filter="Working Paper">Working Papers</button>
+                </div>
+                <div class="sort-box">
+                    <span>Sort by:</span>
+                    <select id="dateSort">
+                        <option value="latest">Latest</option>
+                        <option value="oldest">Oldest</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="publications-list" id="publicationsList">
+        <!-- Publication 1 -->
+        <div class="pub-card" data-type="Article" data-date="2026-03-15"
+             data-author="Dr. Li Wei" data-fulltext="Full research text about AI in medical imaging goes here...">
+            <div class="pub-image"></div>
+            <div class="pub-content">
+                <div class="pub-meta"><span>Article</span> • <span>March 15, 2026</span></div>
+                <h2 class="pub-title">AI-Driven Early Detection of Glaucoma</h2>
+                <p class="pub-desc">Exploring deep learning architectures to improve accuracy in retinal scan analysis.</p>
+                <button class="read-btn">Read</button>
+            </div>
+        </div>
+
+        <!-- Publication 2 -->
+        <div class="pub-card" data-type="Working Paper" data-date="2026-01-10"
+             data-author="Sriya Iyer" data-fulltext="Draft paper on lattice-based cryptography schemes...">
+            <div class="pub-image"></div>
+            <div class="pub-content">
+                <div class="pub-meta"><span>Working Paper</span> • <span>Jan 10, 2026</span></div>
+                <h2 class="pub-title">Post-Quantum Cryptography Standards</h2>
+                <p class="pub-desc">A comparative study of lattice-based algorithms in modern network protocols.</p>
+                <button class="read-btn">Read</button>
+            </div>
+        </div>
+
+        <!-- Publication 3 -->
+        <div class="pub-card" data-type="Report" data-date="2025-11-20"
+             data-author="Amara Traoré" data-fulltext="Annual report on digital ethics in higher education...">
+            <div class="pub-image"></div>
+            <div class="pub-content">
+                <div class="pub-meta"><span>Report</span> • <span>Nov 20, 2025</span></div>
+                <h2 class="pub-title">2025 Cybersecurity Ethics Report</h2>
+                <p class="pub-desc">Policy recommendations for governing AI and data privacy in academic institutions.</p>
+                <button class="read-btn">Read</button>
+            </div>
+        </div>
+
+        <!-- Publication 4 -->
+        <div class="pub-card" data-type="Article" data-date="2025-08-05"
+             data-author="Hans Müller" data-fulltext="Technical details on energy harvesting in ARM-based chips...">
+            <div class="pub-image"></div>
+            <div class="pub-content">
+                <div class="pub-meta"><span>Article</span> • <span>Aug 05, 2025</span></div>
+                <h2 class="pub-title">Energy-Efficient Embedded Systems</h2>
+                <p class="pub-desc">A new approach to clock-gating in low-power IoT microcontrollers.</p>
+                <button class="read-btn">Read</button>
+            </div>
+        </div>
+
+        <!-- Publication 5 -->
+        <div class="pub-card" data-type="Report" data-date="2025-05-12"
+             data-author="Fatima Al-Fassi" data-fulltext="Technical analysis of water distribution sensor networks...">
+            <div class="pub-image"></div>
+            <div class="pub-content">
+                <div class="pub-meta"><span>Report</span> • <span>May 12, 2025</span></div>
+                <h2 class="pub-title">Big Data for Sustainable Water Management</h2>
+                <p class="pub-desc">Using sensor networks to predict water shortages in urban environments.</p>
+                <button class="read-btn">Read</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-logo">
+                <img class="logo-efrei-footer" src="../img/logoEfrei.png" alt="Efrei Logo" />
+            </div>
+
+            <div class="footer-nav">
+                <h3>NAVIGATION</h3>
+                <a href="index.html">Home</a>
+                <a href="faculty.html">Faculty</a>
+                <a href="publications.html">Publications</a>
+                <a href="content.html">Content</a>
+            </div>
+
+            <div class="footer-contact">
+                <div class="contact-info">
+                    <h3>CONTACT</h3>
+                    <p>30-32 av. de la République</p>
+                    <p>94800 Villejuif, France</p>
+                    <p>cs.department@efrei.fr</p>
+                    <p>+33 1 01 02 03 04</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>©2026 Efrei | <a href="#">Personal Data</a> | <a href="https://efrei.fr">Efrei.fr</a> | <a href="#">About Us</a></p>
+        </div>
+    </footer>
+</div>
+
+<!-- Fenêtre Modale Publication -->
+<div id="pubModal" class="modal">
+    <div class="modal-content pub-modal-size">
+        <span class="close-modal">&times;</span>
+
+        <div class="pub-modal-header-split">
+            <!-- Partie Gauche : Image + Meta -->
+            <div class="modal-section-left">
+                <div class="modal-image-placeholder"></div>
+                <p id="modalPubMeta" class="modal-meta-text">Type • Date</p>
+            </div>
+
+            <!-- Partie Droite : Auteur -->
+            <div class="modal-section-right">
+                <div class="author-photo-placeholder"></div>
+                <p id="modalAuthorName" class="modal-author-name">Author Name</p>
+            </div>
+        </div>
+
+        <div class="pub-modal-body">
+            <h2 id="modalPubTitle">Publication Title</h2>
+            <hr class="modal-divider">
+            <div id="modalFullText" class="modal-text-content">
+                <!-- Texte de la publication -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/scriptPublications.js"></script>
+</body>
+</html>

@@ -43,34 +43,84 @@
     </section>
 
     <main class="faculty-grid" id="facultyGrid">
-        <div class="person-card" data-role="Department Head">
+        <!-- Faculty Member 1 -->
+        <div class="person-card" data-role="Department Head"
+             data-bio="A specialist in Information Systems governance with over 20 years of experience. Amara leads the department with a vision focused on technological ethics and international collaboration."
+             data-edu="PhD in Computer Science (Senegal), MBA in Technology Management (HEC Paris).">
             <div class="photo-area"></div>
             <h2 class="name">Amara Traoré</h2>
             <p class="role">Department Head</p>
         </div>
-        <div class="person-card" data-role="Researcher">
+
+        <!-- Faculty Member 2 -->
+        <div class="person-card" data-role="Researcher"
+             data-bio="Expert in computer vision and deep learning. Her current work focuses on AI-assisted medical image recognition for early diagnosis."
+             data-edu="PhD in Computer Science (Tsinghua University), Post-doc at INRIA.">
             <div class="photo-area"></div>
             <h2 class="name">Li Wei</h2>
             <p class="role">Researcher</p>
         </div>
-        <div class="person-card" data-role="Professor">
+
+        <!-- Faculty Member 3 -->
+        <div class="person-card" data-role="Professor"
+             data-bio="Hans teaches processor architecture and embedded systems. He is renowned for his research on optimizing energy consumption in data centers."
+             data-edu="MSc in Electrical Engineering (Munich), PhD in Embedded Systems (TU Berlin).">
             <div class="photo-area"></div>
             <h2 class="name">Hans Müller</h2>
             <p class="role">Professor</p>
         </div>
-        <div class="person-card" data-role="PhD Student">
+
+        <!-- Faculty Member 4 -->
+        <div class="person-card" data-role="PhD Student"
+             data-bio="Sriya works on post-quantum cryptography. She develops new encryption algorithms resistant to attacks from future quantum computers."
+             data-edu="B.Tech Computer Science (IIT Bombay), MSc Cybersecurity (Efrei).">
             <div class="photo-area"></div>
             <h2 class="name">Sriya Iyer</h2>
             <p class="role">PhD Student</p>
         </div>
-        <div class="person-card" data-role="Professor">
+
+        <!-- Faculty Member 5 -->
+        <div class="person-card" data-role="Professor"
+             data-bio="Passionate about software engineering and Agile methods, Elena supervises senior projects and collaborates with major aerospace companies."
+             data-edu="Software Engineering Degree (Madrid), Master in Project Management (UPMC).">
             <div class="photo-area"></div>
             <h2 class="name">Elena Rodriguez</h2>
             <p class="role">Professor</p>
         </div>
-        <div class="person-card" data-role="Researcher">
+
+        <!-- Faculty Member 6 -->
+        <div class="person-card" data-role="Researcher"
+             data-bio="Jean-Baptiste is an expert in recurrent neural networks. He focuses on Natural Language Processing (NLP) for low-resource languages."
+             data-edu="Research Master in AI (Sorbonne), PhD in Computational Linguistics.">
             <div class="photo-area"></div>
             <h2 class="name">Jean-Baptiste Durand</h2>
+            <p class="role">Researcher</p>
+        </div>
+
+        <!-- Faculty Member 7 -->
+        <div class="person-card" data-role="Professor"
+             data-bio="Yuki teaches Full-Stack development and Web Security. Her research involves automatic vulnerability detection in Smart Contracts."
+             data-edu="PhD in Information Security (Tokyo Institute of Technology), Master in Applied Mathematics.">
+            <div class="photo-area"></div>
+            <h2 class="name">Yuki Tanaka</h2>
+            <p class="role">Professor</p>
+        </div>
+
+        <!-- Faculty Member 8 -->
+        <div class="person-card" data-role="PhD Student"
+             data-bio="Mateo is conducting his thesis on Human-Computer Interaction (HCI) within Augmented Reality environments for industrial training."
+             data-edu="Master in Computer Graphics (Buenos Aires), MSc in VR/AR (Efrei).">
+            <div class="photo-area"></div>
+            <h2 class="name">Mateo Garcia</h2>
+            <p class="role">PhD Student</p>
+        </div>
+
+        <!-- Faculty Member 9 -->
+        <div class="person-card" data-role="Researcher"
+             data-bio="Fatima specializes in Big Data and massive data analysis for sustainable development and water resource optimization."
+             data-edu="State Engineering Degree in CS (Morocco), PhD in Data Science (Polytechnique Montréal).">
+            <div class="photo-area"></div>
+            <h2 class="name">Fatima Al-Fassi</h2>
             <p class="role">Researcher</p>
         </div>
     </main>
@@ -106,6 +156,27 @@
     </footer>
 </div>
 
-<script src="../js/script.js"></script>
+<script src="../js/scriptFaculty.js"></script>
+
+<!-- Fenêtre Modale -->
+<div id="memberModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+            <div class="modal-photo"></div>
+            <div class="modal-info">
+                <h2 id="modalName">Name Surname</h2>
+                <p id="modalRole">Current Role</p>
+            </div>
+        </div>
+        <div class="modal-body">
+            <h3>Biography</h3>
+            <p id="modalBio">Description goes here...</p>
+            <h3>Education</h3>
+            <p id="modalEdu">Diplomas and background...</p>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
