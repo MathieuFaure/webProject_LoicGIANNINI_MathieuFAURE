@@ -654,6 +654,133 @@ body {
     text-decoration: none;
 }
 
+/* home page */
+
+.home-page {
+    background-color: #ffffff;
+    color: #000;
+    padding: 50px 8%;
+}
+
+.home-hero-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.home-hero-divider {
+    width: 90px;
+    height: 4px;
+    background-color: #000;
+    margin-bottom: 35px;
+}
+
+.campus-block {
+    margin-bottom: 8px;
+}
+
+.image-campus-efrei {
+    width: 100%;
+    max-width: 780px;
+    display: block;
+    border-radius: 4px;
+}
+
+.campus-caption {
+    font-size: 0.75rem;
+    color: #000;
+    margin-top: 6px;
+    margin-bottom: 35px;
+}
+
+.campus-caption::before {
+    content: '\25A0  ';
+}
+
+.missions-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 16px;
+}
+
+.missions-divider {
+    width: 70px;
+    height: 4px;
+    background-color: #000000;
+    margin-bottom: 20px;
+}
+
+.missions-text {
+    font-size: 0.9rem;
+    color: #000;
+    line-height: 1.7;
+    max-width: 780px;
+    margin-bottom: 60px;
+}
+
+.news-section {
+    display: flex;
+    gap: 40px;
+    align-items: flex-end;
+}
+
+.news-image {
+    width: 290px;
+    min-width: 290px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 4px;
+    background-color: #333;
+    flex-shrink: 0;
+}
+
+.news-content {
+    flex: 1;
+}
+
+.news-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 16px;
+}
+
+.news-divider {
+    width: 70px;
+    height: 4px;
+    background-color: #000000;
+    margin-bottom: 20px;
+}
+
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.news-list li::before {
+    content: '\25A0';
+    color: #000;
+    font-size: 0.7rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
 /* RESPONSIVITY */
 @media (max-width: 1100px) {
     .faculty-grid { grid-template-columns: repeat(2, 1fr); }
