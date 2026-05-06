@@ -352,6 +352,44 @@ body {
     margin-bottom: 15px;
 }
 
+/* SYLLABUS */
+.syllabus-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    font-size: 0.9rem;
+}
+
+.syllabus-table td {
+    padding: 12px 15px;
+    border: 1px solid #eee;
+    vertical-align: top;
+    line-height: 1.4;
+    color: #333;
+}
+
+table.syllabus-table td.syll-cat {
+    width: 150px;
+    font-weight: bold;
+    background-color: #f9f9f9;
+    color: #004a99;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.modal-divider {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin: 30px 0;
+}
+
+.programs-modal {
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
 /* --- PLANNING & GRID --- */
 .planning-header {
     display: flex;
