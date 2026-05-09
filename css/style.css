@@ -49,7 +49,8 @@ body {
 }
 
 .page-title h1 {
-    font-size: 3.5rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(4rem, 7vw, 8rem);
     margin-bottom: 15px;
 }
 
